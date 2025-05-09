@@ -8,10 +8,6 @@ fun main() {
     val dataGrapper: StatletikDataGrapper = StatletikDataGrapper(document);
     val bestResults = dataGrapper.getBestResults() ?: return;
     for (event in bestResults) {
-        println();
-        println(event.title);
-        for (result in event.results) {
-            println("\t" + result);
-        }
+        println("\n" + event);
     }
 }
